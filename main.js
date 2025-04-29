@@ -13,8 +13,11 @@ menuBtn.addEventListener("click", (e) => {
 });
 
 navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-3-line");
+  // Collapse the nav menu only if a link (anchor tag) is clicked
+  if (e.target.tagName === "A") {
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "ri-menu-3-line");
+  }
 });
 
 const scrollRevealOption = {
@@ -23,44 +26,49 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
-// header container
+// Header container
 ScrollReveal().reveal(".header__content h1", {
   ...scrollRevealOption,
 });
-
 ScrollReveal().reveal(".header__content .section__description", {
   ...scrollRevealOption,
   delay: 500,
 });
-
 ScrollReveal().reveal(".header__content .header__btn", {
   ...scrollRevealOption,
   delay: 1000,
 });
 
-// about container
+// About container
 ScrollReveal().reveal(".about__content .section__header", {
   ...scrollRevealOption,
 });
-
 ScrollReveal().reveal(".about__content .section__description", {
   ...scrollRevealOption,
   delay: 500,
 });
-
 ScrollReveal().reveal(".about__content .about__btn", {
   ...scrollRevealOption,
   delay: 1000,
 });
 
-// service container
-ScrollReveal().reveal(".service__card", {
+// Skills section
+ScrollReveal().reveal(".skills__container .section__header", {
   ...scrollRevealOption,
-  interval: 500,
+});
+ScrollReveal().reveal(".skills__container .service__card", {
+  ...scrollRevealOption,
+  interval: 200,
 });
 
-// portfolio container
+// Services
+ScrollReveal().reveal(".service__card", {
+  ...scrollRevealOption,
+  interval: 300,
+});
+
+// Portfolio
 ScrollReveal().reveal(".portfolio__card", {
   duration: 1000,
-  interval: 500,
+  interval: 200,
 });
