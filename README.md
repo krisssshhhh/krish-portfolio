@@ -1,1 +1,1 @@
-Create a stunning and professional portfolio website from scratch with this step-by-step tutorial!
+Simle portfolio using HTML,CSS and JAVASCRIPT
